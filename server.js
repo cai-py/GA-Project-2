@@ -45,11 +45,16 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
 //___________________
+// Controllers
+const libraryController = require('./Controllers/library_controller.js')
+app.use('/library', libraryController)
+
+//___________________
 // Routes
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.send('welcome to musique');
 });
 
 //___________________
