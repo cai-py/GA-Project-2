@@ -46,6 +46,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //___________________
 // Routes
+qpp.get('/library', (req.res) => {
+  res.send('Library')
+})
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
