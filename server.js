@@ -45,10 +45,10 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
 //___________________
-// Routes
-app.get('/library', (req,res) => {
-  res.send('Library')
-})
+// Routes => collections
+const homeController = require('./controllers/home_controller.js')
+app.use('/', homeController)
+
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
