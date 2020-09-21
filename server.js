@@ -48,6 +48,8 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes => collections
 const homeController = require('./controllers/main_controller.js')
 app.use('/', homeController)
+const usersController = require('./controllers/users_controller.js')
+app.use('/', usersController)
 
 //___________________
 //localhost:3000
