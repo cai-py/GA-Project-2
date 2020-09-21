@@ -1,10 +1,10 @@
 // 'library' is used instead of 'app' in server.js
 const express = require('express')
-const home = express.Router()
+const main = express.Router()
 
 // INDEX
-home.get('/home', (req,res) => {
+main.get('/home', (req,res) => {
     res.render('site/home.ejs')
 })
 
-module.exports = home
+module.exports = main
