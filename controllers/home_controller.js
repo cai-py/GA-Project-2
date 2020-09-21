@@ -4,7 +4,7 @@ const home = express.Router()
 
 // INDEX
 home.get('/home', (req,res) => {
-    res.render('home/home.ejs')
+    res.render('site/home.ejs')
 })
 
 module.exports = home
