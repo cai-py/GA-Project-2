@@ -47,16 +47,19 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes => collections
 
+//////////////
 // home
 app.get('/home', (req,res) => {
   res.render('site/home.ejs')
 })
 
+///////////////
 // new user
 app.get('/user/new', (req,res) => {
   res.render('users/new_user.ejs')
 })
 
+/////////////////
 // library
 app.get('/home/library', (req,res) => {
   res.render('site/library.ejs')
@@ -67,6 +70,12 @@ app.get('/home/library/new', (req,res) => {
   res.render('sheets/new_sheet.ejs')
 })
 
+// create
+app.post('/home/library', (req,res) => {
+  
+})
+
+////////////////
 // log in
 app.get('/session/new', (req,res) => {
   res.render('sessions/new_session.ejs')
