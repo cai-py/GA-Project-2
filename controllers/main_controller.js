@@ -3,7 +3,7 @@ const express = require('express')
 const main = express.Router()
 
 // INDEX
-main.get('/home', (req,res) => {
+main.get('home', (req,res) => {
     res.render('site/home.ejs')
 })
 
