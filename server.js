@@ -46,7 +46,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //___________________
 // Controllers
-const libraryController = require('./Controllers/library_controller.js')
+const libraryController = require('./controllers/library_controller.js')
 app.use('/library', libraryController)
 
 //___________________
