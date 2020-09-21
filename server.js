@@ -57,13 +57,22 @@ app.get('/user/new', (req,res) => {
   res.render('users/new_user.ejs')
 })
 
+// library
+app.get('/home/library', (req,res) => {
+  res.render('site/library.ejs')
+})
+
+// new sheet
+app.get('/home/library/new', (req,res) => {
+  res.render('sheets/new_sheet.ejs')
+})
+
 // log in
 app.get('/session/new', (req,res) => {
   res.render('sessions/new_session.ejs')
 })
-
 app.post('/', (req,res) => {
-  res.redirect('/home')
+  res.redirect('/home/library')
 })
 
 
