@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <%- include ('../partials/nav.ejs') %>
+    <nav>
+        <%- include ('../partials/nav.ejs') %>
+    </nav>
     <div class="container">
-        <h1>Make an Account</h1>
-        <form action="" method="">
+        <h1>Log In</h1>
+        <form action="/?_method=POST" method="POST">
             <label for="username">Username: </label>
             <input type="text" name="username" required/>
 

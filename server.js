@@ -46,13 +46,29 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //___________________
 // Routes => collections
-const mainController = require('./controllers/main_controller.js')
-app.use('/', mainController)
-const usersController = require('./controllers/users_controller.js')
-app.use('/users', usersController)
+
+// home
+app.get('/home', (req,res) => {
+  res.render('site/home.ejs')
+})
+
+// new user
+app.get('/user/new', (req,res) => {
+  res.render('users/new_user.ejs')
+})
+
+// log in
+app.get('/session/new', (req,res) => {
+  res.render('sessions/new_session.ejs')
+})
+
+app.post('/', (req,res) => {
+  res.redirect('/home')
+})
+
 
 //___________________
-//localhost:3000
+// localhost:3000
 // app.get('/' , (req, res) => {
 //   res.send('Hello World!');
 // });
