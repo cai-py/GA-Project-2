@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
+
+        <form action="/home/library/<%= sheet.id %>?_method=PUT" method="POST">
+            <label for="title">Title: </label>
+            <input name="title" type="text" value="<%= sheet.title %>"/><br/>
+
+            <label for="img">Img URL: </label>
+            <input name="img" type="text" value="<%= sheet.img %>"/><br/>
+
+            <label for="comp">Composer: </label>
+            <input name="comp" type="text" value="<%= sheet.comp %>"/><br/>
+
+            <input type="submit" value="update"/><br/>
+        </form>
+    </div>
+</body>
+</html>

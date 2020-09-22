@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <div class="container">
@@ -16,7 +17,14 @@
 
         <div class="sheets_container">
             <% for (let sheet of sheets) { %>
-                <h3><%= sheet.title %></h3>
+                <div class="card" style="border: solid black;">
+                    <h4><a href="/home/library/<%= sheet._id %>"><%= sheet.title %></a></h4>
+                    <p><%= sheet.comp %></p>
+                    <form action="/home/library/<%= sheet.id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                </div>
+
             <% } %>
             
         </div>

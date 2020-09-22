@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <nav>
+        <%- include ('../partials/nav.ejs') %>
+    </nav>
+
+    <div class="container">
+        <button type="button" value="EDIT">
+            <a href="/home/library/<%= sheet.id %>/edit">Edit</a>
+        </button>
+        <img src="<%= sheet.img %>"/>
+    </div>
+</body>
+</html>
