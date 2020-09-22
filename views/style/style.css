@@ -1,0 +1,27 @@
+body {
+    background-color: #f0ece3;
+}
+
+.container {
+    height: 75px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #596e79;
+    padding: 0px 20px;
+    
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: #c7b198;
+}

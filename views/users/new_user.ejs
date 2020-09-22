@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome</title>
+    <style>
+        <%- include ('../style/style.css') %>
+    </style>
 </head>
 <body>
-    <%- include ('../partials/nav.ejs') %>
+    
     <div class="container">
-        <h1>Make an Account</h1>
+        <nav>
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
+        <h3>Make an Account</h3>
+
         <form action="" method="">
             <label for="username">Username: </label>
             <input type="text" name="username" required/>

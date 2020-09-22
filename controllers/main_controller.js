@@ -26,7 +26,7 @@ main.get('/setup/seed', (req,res) => {
 })
 
 /////////////////
-// library
+// library / index
 main.get('/home/library', (req,res) => {
     Sheet.find({}, (error, allSheets) => {
         res.render('site/library.ejs',
