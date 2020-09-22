@@ -4,6 +4,22 @@
     <title>Library</title>
     <style>
         <%- include ('../style/style.css') %>
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .new {
+            height: 20px;
+        }
+    
+        .card {
+            padding: 10px 20px;
+        }
+        .title {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -12,13 +28,15 @@
             <%- include ('../partials/nav.ejs') %>
         </nav>
 
-        <h2>Library</h2>
-        <button><a href="/home/library/new">new</a></button>
-
+        <div class="header">
+            <h2>Library</h2>
+            <button class="new"><a href="/home/library/new">new</a></button>
+        </div>
+        
         <div class="sheets_container">
             <% for (let sheet of sheets) { %>
                 <div class="card" style="border: solid black;">
-                    <h4><a href="/home/library/<%= sheet._id %>"><%= sheet.title %></a></h4>
+                    <h4 class="title"><a href="/home/library/<%= sheet._id %>"><%= sheet.title %></a></h4>
                     <p><%= sheet.comp %></p>
                     <form action="/home/library/<%= sheet.id %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>

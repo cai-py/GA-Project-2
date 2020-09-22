@@ -4,18 +4,32 @@
     <title><%= sheet.title %></title>
     <style>
         <%- include ('../style/style.css') %>
+        .imgContainer{
+            max-width: 1000px;
+            overflow: hidden;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <%- include ('../partials/nav.ejs') %>
-    </nav>
-
     <div class="container">
-        <button type="button" value="EDIT">
-            <a href="/home/library/<%= sheet.id %>/edit">Edit</a>
-        </button>
-        <img src="<%= sheet.img %>"/>
+        <nav>
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
+
+        <div class="container">
+            <button type="button" value="EDIT">
+                <a href="/home/library/<%= sheet.id %>/edit">Edit</a>
+            </button>
+            <div class="imgContainer">
+                <img src="<%= sheet.img %>"/>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>
