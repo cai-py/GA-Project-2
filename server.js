@@ -87,6 +87,10 @@ app.post('/', (req,res) => {
   res.redirect('/home/library')
 })
 
+app.get('/home/library', (req,res) => {
+  res.render('/site/library.ejs')
+})
+
 
 //___________________
 // localhost:3000
