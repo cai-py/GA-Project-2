@@ -16,9 +16,14 @@
     
         .card {
             padding: 10px 20px;
+            border: solid #596e79;
         }
         .title {
             margin: 0;
+            color: #596e79;
+        }
+        p {
+            color: #596e79;
         }
     </style>
 </head>
@@ -35,8 +40,8 @@
         
         <div class="sheets_container">
             <% for (let sheet of sheets) { %>
-                <div class="card" style="border: solid black;">
-                    <h4 class="title"><a href="/home/library/<%= sheet._id %>"><%= sheet.title %></a></h4>
+                <div class="card">
+                    <h4 class="title"><a class="title" href="/home/library/<%= sheet._id %>"><%= sheet.title %></a></h4>
                     <p><%= sheet.comp %></p>
                     <form action="/home/library/<%= sheet.id %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
